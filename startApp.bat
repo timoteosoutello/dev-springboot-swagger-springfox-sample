@@ -1,0 +1,1 @@
+call mvn clean install -DskipTests && java -agentlib:jdwp=transport=dt_socket,address=9797,server=y,suspend=n -Dspring.profiles.active="local" -jar target/springboot-swagger-springfox-sample-1.0.0-SNAPSHOT.war
