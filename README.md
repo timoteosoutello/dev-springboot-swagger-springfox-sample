@@ -37,7 +37,7 @@ The message like above will appear:
 
 PS1: The default port is defined on src\main\resources\application.properties
 
-## Postman
+## Acessing application by swagger-UI
 
-Local collections and environment are located on Postman folder.
+Access http://localhost:9292/api/v1/spring-sample/swagger-ui.html
 
