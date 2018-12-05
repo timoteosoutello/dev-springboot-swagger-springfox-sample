@@ -15,7 +15,6 @@ public class DummyServiceImpl implements DummyService {
   private static Logger logger =
       LogManager.getLogger(LogAttribute.SPRING_FRAMEWORK.getPackageName());
 
-  @Override
   public ResponseEntity<Response> handleResponse(Request request) {
     logger.info("Receiving request instance {}", request.toString());
     Response response = new Response();
