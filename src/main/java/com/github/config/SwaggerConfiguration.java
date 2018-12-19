@@ -14,19 +14,17 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @Configuration
 @EnableSwagger2
 public class SwaggerConfiguration {
-  @Bean
-  public Docket api() {
-    return new Docket(DocumentationType.SWAGGER_2).select()
-        .apis(RequestHandlerSelectors.basePackage("com.github.controller"))
-        .paths(PathSelectors.any()).build().useDefaultResponseMessages(false).apiInfo(apiInfo())
-        .pathMapping("/");
-  }
+	@Bean
+	public Docket api() {
+		return new Docket(DocumentationType.SWAGGER_2).select()
+				.apis(RequestHandlerSelectors.basePackage("com.github.controller")).paths(PathSelectors.any()).build()
+				.useDefaultResponseMessages(false).apiInfo(apiInfo()).pathMapping("/");
+	}
 
-  private ApiInfo apiInfo() {
-    StringBuilder description = new StringBuilder();
-    description.append("With this API, it's possible to get sample use.");
-    description.append("Return dummy values on the endpoinst");
-    return new ApiInfoBuilder().title("Swagger sample API").version("1.0.0")
-        .description(description.toString()).build();
-  }
+	private ApiInfo apiInfo() {
+		StringBuilder description = new StringBuilder();
+		description.append("This is Gateway API.");
+		return new ApiInfoBuilder().title("Gateway API").version("1.0.0").description(description.toString())
+				.build();
+	}
 }

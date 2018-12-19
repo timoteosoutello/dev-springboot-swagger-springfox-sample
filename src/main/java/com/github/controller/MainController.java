@@ -21,26 +21,23 @@ import io.swagger.annotations.ApiResponses;
 @RestController
 public class MainController {
 
-  private DummyService dummyService;
+	private DummyService dummyService;
 
-  @Autowired
-  public MainController(DummyService dummyService) {
-    this.dummyService = dummyService;
-  }
+	@Autowired
+	public MainController(DummyService dummyService) {
+		this.dummyService = dummyService;
+	}
 
-  @RequestMapping(value = "/dummy", method = RequestMethod.POST,
-      produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE},
-      consumes = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
-  @ResponseBody
-  @ApiOperation(value = "Run dummy request")
-  @ApiResponses(value = {
-      @ApiResponse(code = 200, message = "Dummy POST executed successfully",
-          response = Response.class),
-      @ApiResponse(code = 400, message = "Body validation error or query execution exception",
-          response = Response.class)})
-  public final ResponseEntity<Response> dummyMethod(
-      @ApiParam(value = "Body that contains all queries and params",
-          required = true) @RequestBody Request body) {
-    return dummyService.handleResponse(body);
-  }
+	@RequestMapping(value = "/dummy", method = RequestMethod.POST, produces = { MediaType.APPLICATION_JSON_VALUE,
+			MediaType.APPLICATION_XML_VALUE }, consumes = { MediaType.APPLICATION_JSON_VALUE,
+					MediaType.APPLICATION_XML_VALUE })
+	@ResponseBody
+	@ApiOperation(value = "Run dummy request")
+	@ApiResponses(value = {
+			@ApiResponse(code = 200, message = "Dummy POST executed successfully", response = Response.class),
+			@ApiResponse(code = 400, message = "Body validation error or query execution exception", response = Response.class) })
+	public final ResponseEntity<Response> dummyMethod(
+			@ApiParam(value = "Body that contains all queries and params", required = true) @RequestBody Request body) {
+		return dummyService.handleResponse(body);
+	}
 }

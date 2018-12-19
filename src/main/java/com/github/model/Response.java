@@ -12,42 +12,42 @@ import io.swagger.annotations.ApiModel;
 
 @ApiModel(value = "response", description = "Response object", discriminator = "Response object", reference = "Response object")
 public final class Response {
-  @JacksonXmlProperty
-  @JsonInclude(Include.NON_NULL)
-  private String message;
-  @JacksonXmlProperty
-  @JsonInclude(Include.NON_NULL)
-  private String detailMessage;
-  @JsonIgnore
-  private HttpStatus status;
+	@JacksonXmlProperty
+	@JsonInclude(Include.NON_NULL)
+	private String message;
+	@JacksonXmlProperty
+	@JsonInclude(Include.NON_NULL)
+	private String detailMessage;
+	@JsonIgnore
+	private HttpStatus status;
 
-  public String getMessage() {
-    return message;
-  }
+	public String getMessage() {
+		return message;
+	}
 
-  public void setMessage(String message) {
-    this.message = message;
-  }
+	public void setMessage(String message) {
+		this.message = message;
+	}
 
-  public HttpStatus getStatus() {
-    return status;
-  }
+	public HttpStatus getStatus() {
+		return status;
+	}
 
-  public void setStatus(HttpStatus status) {
-    this.status = status;
-  }
+	public void setStatus(HttpStatus status) {
+		this.status = status;
+	}
 
-  public String getDetailMessage() {
-    return detailMessage;
-  }
+	public String getDetailMessage() {
+		return detailMessage;
+	}
 
-  public void setDetailMessage(String detailMessage) {
-    this.detailMessage = detailMessage;
-  }
+	public void setDetailMessage(String detailMessage) {
+		this.detailMessage = detailMessage;
+	}
 
-  @Override
-  public String toString() {
-    return ToStringBuilder.reflectionToString(this);
-  }
+	@Override
+	public String toString() {
+		return ToStringBuilder.reflectionToString(this);
+	}
 
 }

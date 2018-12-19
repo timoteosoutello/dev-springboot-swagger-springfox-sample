@@ -16,28 +16,28 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import com.github.SpringExecutor;
-import com.github.service.DummyServiceImpl;
+import com.github.service.DummyService;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = SpringExecutor.class)
 @WebAppConfiguration
 public class RestApiControllerTest {
-  MainController mainController;
-  @Spy
-  @InjectMocks
-  DummyServiceImpl dummyService;
-  MockMvc mockMvc;
+	MainController mainController;
+	@Spy
+	@InjectMocks
+	DummyService dummyService;
+	MockMvc mockMvc;
 
-  @Before
-  public void setup() throws Exception {
-    mainController = new MainController(dummyService);
-    this.mockMvc = MockMvcBuilders.standaloneSetup(mainController).build();
-  }
+	@Before
+	public void setup() throws Exception {
+		mainController = new MainController(dummyService);
+		this.mockMvc = MockMvcBuilders.standaloneSetup(mainController).build();
+	}
 
-  @Test
-  public void testDummyEndpoint() throws Exception {
-    mockMvc.perform(post("/dummy").contentType(MediaType.APPLICATION_JSON).content("{ }"))
-        .andExpect(status().isOk());
-  }
+	@Test
+	public void testDummyEndpoint() throws Exception {
+		mockMvc.perform(post("/dummy").contentType(MediaType.APPLICATION_JSON).content("{ }"))
+				.andExpect(status().isOk());
+	}
 
 }
