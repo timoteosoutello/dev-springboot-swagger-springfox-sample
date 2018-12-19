@@ -22,6 +22,7 @@
 		<jackson-core.version>2.9.7</jackson-core.version>
 		<junit.version>4.12</junit.version>
 		<log4j2.version>2.11.1</log4j2.version>
+		<lombok.version>1.18.4</lombok.version>
 		<mockito.version>2.23.4</mockito.version>
 		<springframework.version>2.1.1.RELEASE</springframework.version>
 		<springfox-swagger2.version>2.9.2</springfox-swagger2.version>
@@ -76,6 +77,16 @@
 			<artifactId>spring-boot-starter-actuator</artifactId>
 			<version>${springframework.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+			<version>${springframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-cache</artifactId>
+			<version>${springframework.version}</version>
+		</dependency>		
 		<!-- JACKSON for SPRING -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.dataformat</groupId>
@@ -101,7 +112,7 @@
 			<artifactId>commons-lang3</artifactId>
 			<version>${commons-lang3.version}</version>
 		</dependency>
-		<!-- Swagger -->
+		<!-- SWAGGER -->
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger2</artifactId>
@@ -112,7 +123,7 @@
 			<artifactId>springfox-swagger-ui</artifactId>
 			<version>${springfox-swagger2.version}</version>
 		</dependency>
-		<!-- log4j -->
+		<!-- LOG4J2 -->
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-api</artifactId>
@@ -123,10 +134,24 @@
 			<artifactId>log4j-core</artifactId>
 			<version>${log4j2.version}</version>
 		</dependency>
+		<!-- SPLUNK -->
 		<dependency>
 			<groupId>com.splunk.logging</groupId>
 			<artifactId>splunk-library-javalogging</artifactId>
 			<version>${splunk-library-javalogging.version}</version>
+		</dependency>
+		<!-- LOMBOK -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${lombok.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- H2 - Temporary -->
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
 		</dependency>
 	</dependencies>
 	<build>
