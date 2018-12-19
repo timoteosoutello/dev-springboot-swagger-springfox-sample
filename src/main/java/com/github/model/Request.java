@@ -15,7 +15,6 @@ import io.swagger.annotations.ApiModelProperty;
 public final class Request {
 
   @ApiModelProperty(notes = "This flag represents if the query UPDATE/DELETE will run without where or not", required = true)
-  @JacksonXmlProperty
   private String message;
 
   /**
