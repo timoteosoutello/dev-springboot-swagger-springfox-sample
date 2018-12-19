@@ -1,0 +1,178 @@
+{
+	"info": {
+		"_postman_id": "54cabfe7-f854-468e-ba19-0c35c5b1984c",
+		"name": "API Gateway",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Application endpoint context",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/gateway",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"gateway"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actuator",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/gateway/actuator",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"gateway",
+						"actuator"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actuator - Info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/gateway/actuator/info",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"gateway",
+						"actuator",
+						"info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actuator - Health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/gateway/actuator/health",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"gateway",
+						"actuator",
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actuator - Metrics",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/gateway/actuator/metrics",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"gateway",
+						"actuator",
+						"metrics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dummy Test",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept-Encoding",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/gateway/dummy",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"gateway",
+						"dummy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Swagger",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/gateway/v2/api-docs",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"gateway",
+						"v2",
+						"api-docs"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
