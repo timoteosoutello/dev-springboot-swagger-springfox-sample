@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "54cabfe7-f854-468e-ba19-0c35c5b1984c",
-		"name": "API Gateway",
+		"_postman_id": "7bd15bca-96ad-4596-9880-7fd8000a357f",
+		"name": "API Gateway copy",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -146,6 +146,77 @@
 					"path": [
 						"gateway",
 						"dummy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Payload",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept-Encoding",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"test\" : \"test\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}/gateway/payload",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"gateway",
+						"payload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Payloads",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Encoding",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"test\" : \"test\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}/gateway/payloads",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"gateway",
+						"payloads"
 					]
 				}
 			},

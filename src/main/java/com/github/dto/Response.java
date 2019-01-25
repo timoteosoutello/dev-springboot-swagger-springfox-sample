@@ -17,26 +17,28 @@ import lombok.Setter;
 @Getter
 @Setter
 public final class Response {
-	@JsonInclude(Include.NON_NULL)
-	private String message;
-	@JsonInclude(Include.NON_NULL)
-	private String detailMessage;
-	@JsonIgnore
-	private HttpStatus status;
-	@JsonInclude(Include.NON_NULL)
-	private Object content;
+    @JsonInclude(Include.NON_NULL)
+    private String message;
+    @JsonInclude(Include.NON_NULL)
+    private String detailMessage;
+    @JsonIgnore
+    private HttpStatus status;
+    @JsonInclude(Include.NON_NULL)
+    private Object content;
 
-	@Override
-	public String toString() {
-		return ToStringBuilder.reflectionToString(this);
-	}
-	@Override
-	public boolean equals(Object object) {
-		return EqualsBuilder.reflectionEquals(this, object);
-	}
-	@Override
-	public int hashCode() {
-		return HashCodeBuilder.reflectionHashCode(this);
-	}
+    @Override
+    public boolean equals(final Object object) {
+        return EqualsBuilder.reflectionEquals(this, object);
+    }
+
+    @Override
+    public int hashCode() {
+        return HashCodeBuilder.reflectionHashCode(this);
+    }
+
+    @Override
+    public String toString() {
+        return ToStringBuilder.reflectionToString(this);
+    }
 
 }
